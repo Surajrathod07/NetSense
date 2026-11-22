@@ -1,0 +1,92 @@
+[
+  {
+    "mode": "fcfs",
+    "delivery_order": "NNNCNNNCNNNCNNNCNNNCNNNCNNNCNNNC",
+    "avg_network": 0.55027103125,
+    "avg_wait": 384.28130871866983,
+    "classes": {
+      "CRITICAL": {
+        "avg_network": 0.592851,
+        "avg_total": 421.96822974987174,
+        "avg_wait": 421.37537874987174,
+        "max_wait": 768.4342459997424,
+        "n": 8,
+        "p95_network": 0.7629421499999999
+      },
+      "NORMAL": {
+        "avg_network": 0.5360777083333333,
+        "avg_total": 372.4526964166025,
+        "avg_wait": 371.9166187082692,
+        "max_wait": 743.5190799997144,
+        "n": 24,
+        "p95_network": 0.8356625999999994
+      }
+    },
+    "minutes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      32
+    ],
+    "outbound": {
+      "acknowledged": 32
+    },
+    "transmitted_frames": 32
+  },
+  {
+    "mode": "priority",
+    "delivery_order": "NCCCCCCCCNNNNNNNNNNNNNNNNNNNNNNN",
+    "avg_network": 0.53816303125,
+    "avg_wait": 382.98590256249554,
+    "classes": {
+      "CRITICAL": {
+        "avg_network": 0.37466299999999997,
+        "avg_total": 92.9165234999777,
+        "avg_wait": 92.5418604999777,
+        "max_wait": 162.579387999358,
+        "n": 8,
+        "p95_network": 0.43843295
+      },
+      "NORMAL": {
+        "avg_network": 0.5926630416666666,
+        "avg_total": 480.39324629166816,
+        "avg_wait": 479.80058325000147,
+        "max_wait": 766.5475959993273,
+        "n": 24,
+        "p95_network": 0.9712435499999998
+      }
+    },
+    "minutes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      32
+    ],
+    "outbound": {
+      "acknowledged": 32
+    },
+    "transmitted_frames": 32
+  }
+]

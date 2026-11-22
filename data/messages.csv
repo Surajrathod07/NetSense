@@ -1,0 +1,361 @@
+text,label,domain,scenario
+Ward A: Patient unresponsive; summon the emergency team.,CRITICAL,hospital,hospital-CRITICAL-0
+Ward B: Patient unresponsive; summon the emergency team.,CRITICAL,hospital,hospital-CRITICAL-0
+ICU desk: Patient unresponsive; summon the emergency team.,CRITICAL,hospital,hospital-CRITICAL-0
+South wing: Patient unresponsive; summon the emergency team.,CRITICAL,hospital,hospital-CRITICAL-0
+North unit: Patient unresponsive; summon the emergency team.,CRITICAL,hospital,hospital-CRITICAL-0
+Annex: Patient unresponsive; summon the emergency team.,CRITICAL,hospital,hospital-CRITICAL-0
+Ward A: Ventilator failure alarm is active.,CRITICAL,hospital,hospital-CRITICAL-1
+Ward B: Ventilator failure alarm is active.,CRITICAL,hospital,hospital-CRITICAL-1
+ICU desk: Ventilator failure alarm is active.,CRITICAL,hospital,hospital-CRITICAL-1
+South wing: Ventilator failure alarm is active.,CRITICAL,hospital,hospital-CRITICAL-1
+North unit: Ventilator failure alarm is active.,CRITICAL,hospital,hospital-CRITICAL-1
+Annex: Ventilator failure alarm is active.,CRITICAL,hospital,hospital-CRITICAL-1
+Ward A: Oxygen supply interrupted; immediate help required.,CRITICAL,hospital,hospital-CRITICAL-2
+Ward B: Oxygen supply interrupted; immediate help required.,CRITICAL,hospital,hospital-CRITICAL-2
+ICU desk: Oxygen supply interrupted; immediate help required.,CRITICAL,hospital,hospital-CRITICAL-2
+South wing: Oxygen supply interrupted; immediate help required.,CRITICAL,hospital,hospital-CRITICAL-2
+North unit: Oxygen supply interrupted; immediate help required.,CRITICAL,hospital,hospital-CRITICAL-2
+Annex: Oxygen supply interrupted; immediate help required.,CRITICAL,hospital,hospital-CRITICAL-2
+Ward A: Bedside monitor reports critical heart rate.,CRITICAL,hospital,hospital-CRITICAL-3
+Ward B: Bedside monitor reports critical heart rate.,CRITICAL,hospital,hospital-CRITICAL-3
+ICU desk: Bedside monitor reports critical heart rate.,CRITICAL,hospital,hospital-CRITICAL-3
+South wing: Bedside monitor reports critical heart rate.,CRITICAL,hospital,hospital-CRITICAL-3
+North unit: Bedside monitor reports critical heart rate.,CRITICAL,hospital,hospital-CRITICAL-3
+Annex: Bedside monitor reports critical heart rate.,CRITICAL,hospital,hospital-CRITICAL-3
+Ward A: Patient collapsed during transfer.,CRITICAL,hospital,hospital-CRITICAL-4
+Ward B: Patient collapsed during transfer.,CRITICAL,hospital,hospital-CRITICAL-4
+ICU desk: Patient collapsed during transfer.,CRITICAL,hospital,hospital-CRITICAL-4
+South wing: Patient collapsed during transfer.,CRITICAL,hospital,hospital-CRITICAL-4
+North unit: Patient collapsed during transfer.,CRITICAL,hospital,hospital-CRITICAL-4
+Annex: Patient collapsed during transfer.,CRITICAL,hospital,hospital-CRITICAL-4
+Ward A: Emergency call from the resuscitation bay.,CRITICAL,hospital,hospital-CRITICAL-5
+Ward B: Emergency call from the resuscitation bay.,CRITICAL,hospital,hospital-CRITICAL-5
+ICU desk: Emergency call from the resuscitation bay.,CRITICAL,hospital,hospital-CRITICAL-5
+South wing: Emergency call from the resuscitation bay.,CRITICAL,hospital,hospital-CRITICAL-5
+North unit: Emergency call from the resuscitation bay.,CRITICAL,hospital,hospital-CRITICAL-5
+Annex: Emergency call from the resuscitation bay.,CRITICAL,hospital,hospital-CRITICAL-5
+Ward A: Smoke detected in the oxygen store; evacuate immediately.,CRITICAL,hospital,hospital-CRITICAL-6
+Ward B: Smoke detected in the oxygen store; evacuate immediately.,CRITICAL,hospital,hospital-CRITICAL-6
+ICU desk: Smoke detected in the oxygen store; evacuate immediately.,CRITICAL,hospital,hospital-CRITICAL-6
+South wing: Smoke detected in the oxygen store; evacuate immediately.,CRITICAL,hospital,hospital-CRITICAL-6
+North unit: Smoke detected in the oxygen store; evacuate immediately.,CRITICAL,hospital,hospital-CRITICAL-6
+Annex: Smoke detected in the oxygen store; evacuate immediately.,CRITICAL,hospital,hospital-CRITICAL-6
+Ward A: Infusion pump stopped unexpectedly during treatment.,CRITICAL,hospital,hospital-CRITICAL-7
+Ward B: Infusion pump stopped unexpectedly during treatment.,CRITICAL,hospital,hospital-CRITICAL-7
+ICU desk: Infusion pump stopped unexpectedly during treatment.,CRITICAL,hospital,hospital-CRITICAL-7
+South wing: Infusion pump stopped unexpectedly during treatment.,CRITICAL,hospital,hospital-CRITICAL-7
+North unit: Infusion pump stopped unexpectedly during treatment.,CRITICAL,hospital,hospital-CRITICAL-7
+Annex: Infusion pump stopped unexpectedly during treatment.,CRITICAL,hospital,hospital-CRITICAL-7
+Ward A: Backup power failed in intensive care.,CRITICAL,hospital,hospital-CRITICAL-8
+Ward B: Backup power failed in intensive care.,CRITICAL,hospital,hospital-CRITICAL-8
+ICU desk: Backup power failed in intensive care.,CRITICAL,hospital,hospital-CRITICAL-8
+South wing: Backup power failed in intensive care.,CRITICAL,hospital,hospital-CRITICAL-8
+North unit: Backup power failed in intensive care.,CRITICAL,hospital,hospital-CRITICAL-8
+Annex: Backup power failed in intensive care.,CRITICAL,hospital,hospital-CRITICAL-8
+Ward A: Patient monitoring system reports a dangerous pressure drop.,CRITICAL,hospital,hospital-CRITICAL-9
+Ward B: Patient monitoring system reports a dangerous pressure drop.,CRITICAL,hospital,hospital-CRITICAL-9
+ICU desk: Patient monitoring system reports a dangerous pressure drop.,CRITICAL,hospital,hospital-CRITICAL-9
+South wing: Patient monitoring system reports a dangerous pressure drop.,CRITICAL,hospital,hospital-CRITICAL-9
+North unit: Patient monitoring system reports a dangerous pressure drop.,CRITICAL,hospital,hospital-CRITICAL-9
+Annex: Patient monitoring system reports a dangerous pressure drop.,CRITICAL,hospital,hospital-CRITICAL-9
+Ward A: Shift handover starts at nine.,NORMAL,hospital,hospital-NORMAL-0
+Ward B: Shift handover starts at nine.,NORMAL,hospital,hospital-NORMAL-0
+ICU desk: Shift handover starts at nine.,NORMAL,hospital,hospital-NORMAL-0
+South wing: Shift handover starts at nine.,NORMAL,hospital,hospital-NORMAL-0
+North unit: Shift handover starts at nine.,NORMAL,hospital,hospital-NORMAL-0
+Annex: Shift handover starts at nine.,NORMAL,hospital,hospital-NORMAL-0
+Ward A: Routine temperature log entered.,NORMAL,hospital,hospital-NORMAL-1
+Ward B: Routine temperature log entered.,NORMAL,hospital,hospital-NORMAL-1
+ICU desk: Routine temperature log entered.,NORMAL,hospital,hospital-NORMAL-1
+South wing: Routine temperature log entered.,NORMAL,hospital,hospital-NORMAL-1
+North unit: Routine temperature log entered.,NORMAL,hospital,hospital-NORMAL-1
+Annex: Routine temperature log entered.,NORMAL,hospital,hospital-NORMAL-1
+Ward A: The supply report is ready for review.,NORMAL,hospital,hospital-NORMAL-2
+Ward B: The supply report is ready for review.,NORMAL,hospital,hospital-NORMAL-2
+ICU desk: The supply report is ready for review.,NORMAL,hospital,hospital-NORMAL-2
+South wing: The supply report is ready for review.,NORMAL,hospital,hospital-NORMAL-2
+North unit: The supply report is ready for review.,NORMAL,hospital,hospital-NORMAL-2
+Annex: The supply report is ready for review.,NORMAL,hospital,hospital-NORMAL-2
+Ward A: Please confirm tomorrow's patient transport schedule.,NORMAL,hospital,hospital-NORMAL-3
+Ward B: Please confirm tomorrow's patient transport schedule.,NORMAL,hospital,hospital-NORMAL-3
+ICU desk: Please confirm tomorrow's patient transport schedule.,NORMAL,hospital,hospital-NORMAL-3
+South wing: Please confirm tomorrow's patient transport schedule.,NORMAL,hospital,hospital-NORMAL-3
+North unit: Please confirm tomorrow's patient transport schedule.,NORMAL,hospital,hospital-NORMAL-3
+Annex: Please confirm tomorrow's patient transport schedule.,NORMAL,hospital,hospital-NORMAL-3
+Ward A: Fire drill completed successfully.,NORMAL,hospital,hospital-NORMAL-4
+Ward B: Fire drill completed successfully.,NORMAL,hospital,hospital-NORMAL-4
+ICU desk: Fire drill completed successfully.,NORMAL,hospital,hospital-NORMAL-4
+South wing: Fire drill completed successfully.,NORMAL,hospital,hospital-NORMAL-4
+North unit: Fire drill completed successfully.,NORMAL,hospital,hospital-NORMAL-4
+Annex: Fire drill completed successfully.,NORMAL,hospital,hospital-NORMAL-4
+Ward A: Staff meeting moved to the afternoon.,NORMAL,hospital,hospital-NORMAL-5
+Ward B: Staff meeting moved to the afternoon.,NORMAL,hospital,hospital-NORMAL-5
+ICU desk: Staff meeting moved to the afternoon.,NORMAL,hospital,hospital-NORMAL-5
+South wing: Staff meeting moved to the afternoon.,NORMAL,hospital,hospital-NORMAL-5
+North unit: Staff meeting moved to the afternoon.,NORMAL,hospital,hospital-NORMAL-5
+Annex: Staff meeting moved to the afternoon.,NORMAL,hospital,hospital-NORMAL-5
+Ward A: Bedside monitor passed scheduled inspection.,NORMAL,hospital,hospital-NORMAL-6
+Ward B: Bedside monitor passed scheduled inspection.,NORMAL,hospital,hospital-NORMAL-6
+ICU desk: Bedside monitor passed scheduled inspection.,NORMAL,hospital,hospital-NORMAL-6
+South wing: Bedside monitor passed scheduled inspection.,NORMAL,hospital,hospital-NORMAL-6
+North unit: Bedside monitor passed scheduled inspection.,NORMAL,hospital,hospital-NORMAL-6
+Annex: Bedside monitor passed scheduled inspection.,NORMAL,hospital,hospital-NORMAL-6
+Ward A: Patient meal preferences updated.,NORMAL,hospital,hospital-NORMAL-7
+Ward B: Patient meal preferences updated.,NORMAL,hospital,hospital-NORMAL-7
+ICU desk: Patient meal preferences updated.,NORMAL,hospital,hospital-NORMAL-7
+South wing: Patient meal preferences updated.,NORMAL,hospital,hospital-NORMAL-7
+North unit: Patient meal preferences updated.,NORMAL,hospital,hospital-NORMAL-7
+Annex: Patient meal preferences updated.,NORMAL,hospital,hospital-NORMAL-7
+Ward A: Weekly oxygen stock check is complete.,NORMAL,hospital,hospital-NORMAL-8
+Ward B: Weekly oxygen stock check is complete.,NORMAL,hospital,hospital-NORMAL-8
+ICU desk: Weekly oxygen stock check is complete.,NORMAL,hospital,hospital-NORMAL-8
+South wing: Weekly oxygen stock check is complete.,NORMAL,hospital,hospital-NORMAL-8
+North unit: Weekly oxygen stock check is complete.,NORMAL,hospital,hospital-NORMAL-8
+Annex: Weekly oxygen stock check is complete.,NORMAL,hospital,hospital-NORMAL-8
+Ward A: Visitor badges are available at reception.,NORMAL,hospital,hospital-NORMAL-9
+Ward B: Visitor badges are available at reception.,NORMAL,hospital,hospital-NORMAL-9
+ICU desk: Visitor badges are available at reception.,NORMAL,hospital,hospital-NORMAL-9
+South wing: Visitor badges are available at reception.,NORMAL,hospital,hospital-NORMAL-9
+North unit: Visitor badges are available at reception.,NORMAL,hospital,hospital-NORMAL-9
+Annex: Visitor badges are available at reception.,NORMAL,hospital,hospital-NORMAL-9
+Block C: Machine failure alert; conveyor stopped.,CRITICAL,factory,factory-CRITICAL-0
+Line 7: Machine failure alert; conveyor stopped.,CRITICAL,factory,factory-CRITICAL-0
+West plant: Machine failure alert; conveyor stopped.,CRITICAL,factory,factory-CRITICAL-0
+Assembly hall: Machine failure alert; conveyor stopped.,CRITICAL,factory,factory-CRITICAL-0
+Unit B: Machine failure alert; conveyor stopped.,CRITICAL,factory,factory-CRITICAL-0
+Main site: Machine failure alert; conveyor stopped.,CRITICAL,factory,factory-CRITICAL-0
+Block C: Emergency stop activated after a pressure surge.,CRITICAL,factory,factory-CRITICAL-1
+Line 7: Emergency stop activated after a pressure surge.,CRITICAL,factory,factory-CRITICAL-1
+West plant: Emergency stop activated after a pressure surge.,CRITICAL,factory,factory-CRITICAL-1
+Assembly hall: Emergency stop activated after a pressure surge.,CRITICAL,factory,factory-CRITICAL-1
+Unit B: Emergency stop activated after a pressure surge.,CRITICAL,factory,factory-CRITICAL-1
+Main site: Emergency stop activated after a pressure surge.,CRITICAL,factory,factory-CRITICAL-1
+Block C: Fire detected in the workshop; evacuate immediately.,CRITICAL,factory,factory-CRITICAL-2
+Line 7: Fire detected in the workshop; evacuate immediately.,CRITICAL,factory,factory-CRITICAL-2
+West plant: Fire detected in the workshop; evacuate immediately.,CRITICAL,factory,factory-CRITICAL-2
+Assembly hall: Fire detected in the workshop; evacuate immediately.,CRITICAL,factory,factory-CRITICAL-2
+Unit B: Fire detected in the workshop; evacuate immediately.,CRITICAL,factory,factory-CRITICAL-2
+Main site: Fire detected in the workshop; evacuate immediately.,CRITICAL,factory,factory-CRITICAL-2
+Block C: Cooling pump failed and temperature is rising.,CRITICAL,factory,factory-CRITICAL-3
+Line 7: Cooling pump failed and temperature is rising.,CRITICAL,factory,factory-CRITICAL-3
+West plant: Cooling pump failed and temperature is rising.,CRITICAL,factory,factory-CRITICAL-3
+Assembly hall: Cooling pump failed and temperature is rising.,CRITICAL,factory,factory-CRITICAL-3
+Unit B: Cooling pump failed and temperature is rising.,CRITICAL,factory,factory-CRITICAL-3
+Main site: Cooling pump failed and temperature is rising.,CRITICAL,factory,factory-CRITICAL-3
+Block C: Operator trapped near the loading gate.,CRITICAL,factory,factory-CRITICAL-4
+Line 7: Operator trapped near the loading gate.,CRITICAL,factory,factory-CRITICAL-4
+West plant: Operator trapped near the loading gate.,CRITICAL,factory,factory-CRITICAL-4
+Assembly hall: Operator trapped near the loading gate.,CRITICAL,factory,factory-CRITICAL-4
+Unit B: Operator trapped near the loading gate.,CRITICAL,factory,factory-CRITICAL-4
+Main site: Operator trapped near the loading gate.,CRITICAL,factory,factory-CRITICAL-4
+Block C: Gas leak detected; immediate assistance required.,CRITICAL,factory,factory-CRITICAL-5
+Line 7: Gas leak detected; immediate assistance required.,CRITICAL,factory,factory-CRITICAL-5
+West plant: Gas leak detected; immediate assistance required.,CRITICAL,factory,factory-CRITICAL-5
+Assembly hall: Gas leak detected; immediate assistance required.,CRITICAL,factory,factory-CRITICAL-5
+Unit B: Gas leak detected; immediate assistance required.,CRITICAL,factory,factory-CRITICAL-5
+Main site: Gas leak detected; immediate assistance required.,CRITICAL,factory,factory-CRITICAL-5
+Block C: Security breach detected at the server room.,CRITICAL,factory,factory-CRITICAL-6
+Line 7: Security breach detected at the server room.,CRITICAL,factory,factory-CRITICAL-6
+West plant: Security breach detected at the server room.,CRITICAL,factory,factory-CRITICAL-6
+Assembly hall: Security breach detected at the server room.,CRITICAL,factory,factory-CRITICAL-6
+Unit B: Security breach detected at the server room.,CRITICAL,factory,factory-CRITICAL-6
+Main site: Security breach detected at the server room.,CRITICAL,factory,factory-CRITICAL-6
+Block C: Hydraulic line burst; isolate the equipment.,CRITICAL,factory,factory-CRITICAL-7
+Line 7: Hydraulic line burst; isolate the equipment.,CRITICAL,factory,factory-CRITICAL-7
+West plant: Hydraulic line burst; isolate the equipment.,CRITICAL,factory,factory-CRITICAL-7
+Assembly hall: Hydraulic line burst; isolate the equipment.,CRITICAL,factory,factory-CRITICAL-7
+Unit B: Hydraulic line burst; isolate the equipment.,CRITICAL,factory,factory-CRITICAL-7
+Main site: Hydraulic line burst; isolate the equipment.,CRITICAL,factory,factory-CRITICAL-7
+Block C: Furnace temperature exceeded the critical limit.,CRITICAL,factory,factory-CRITICAL-8
+Line 7: Furnace temperature exceeded the critical limit.,CRITICAL,factory,factory-CRITICAL-8
+West plant: Furnace temperature exceeded the critical limit.,CRITICAL,factory,factory-CRITICAL-8
+Assembly hall: Furnace temperature exceeded the critical limit.,CRITICAL,factory,factory-CRITICAL-8
+Unit B: Furnace temperature exceeded the critical limit.,CRITICAL,factory,factory-CRITICAL-8
+Main site: Furnace temperature exceeded the critical limit.,CRITICAL,factory,factory-CRITICAL-8
+Block C: Smoke alarm active near the production line.,CRITICAL,factory,factory-CRITICAL-9
+Line 7: Smoke alarm active near the production line.,CRITICAL,factory,factory-CRITICAL-9
+West plant: Smoke alarm active near the production line.,CRITICAL,factory,factory-CRITICAL-9
+Assembly hall: Smoke alarm active near the production line.,CRITICAL,factory,factory-CRITICAL-9
+Unit B: Smoke alarm active near the production line.,CRITICAL,factory,factory-CRITICAL-9
+Main site: Smoke alarm active near the production line.,CRITICAL,factory,factory-CRITICAL-9
+Block C: Today's maintenance meeting is scheduled for three.,NORMAL,factory,factory-NORMAL-0
+Line 7: Today's maintenance meeting is scheduled for three.,NORMAL,factory,factory-NORMAL-0
+West plant: Today's maintenance meeting is scheduled for three.,NORMAL,factory,factory-NORMAL-0
+Assembly hall: Today's maintenance meeting is scheduled for three.,NORMAL,factory,factory-NORMAL-0
+Unit B: Today's maintenance meeting is scheduled for three.,NORMAL,factory,factory-NORMAL-0
+Main site: Today's maintenance meeting is scheduled for three.,NORMAL,factory,factory-NORMAL-0
+Block C: Machine inspection completed successfully.,NORMAL,factory,factory-NORMAL-1
+Line 7: Machine inspection completed successfully.,NORMAL,factory,factory-NORMAL-1
+West plant: Machine inspection completed successfully.,NORMAL,factory,factory-NORMAL-1
+Assembly hall: Machine inspection completed successfully.,NORMAL,factory,factory-NORMAL-1
+Unit B: Machine inspection completed successfully.,NORMAL,factory,factory-NORMAL-1
+Main site: Machine inspection completed successfully.,NORMAL,factory,factory-NORMAL-1
+Block C: Routine conveyor speed log recorded.,NORMAL,factory,factory-NORMAL-2
+Line 7: Routine conveyor speed log recorded.,NORMAL,factory,factory-NORMAL-2
+West plant: Routine conveyor speed log recorded.,NORMAL,factory,factory-NORMAL-2
+Assembly hall: Routine conveyor speed log recorded.,NORMAL,factory,factory-NORMAL-2
+Unit B: Routine conveyor speed log recorded.,NORMAL,factory,factory-NORMAL-2
+Main site: Routine conveyor speed log recorded.,NORMAL,factory,factory-NORMAL-2
+Block C: Weekly equipment report is available.,NORMAL,factory,factory-NORMAL-3
+Line 7: Weekly equipment report is available.,NORMAL,factory,factory-NORMAL-3
+West plant: Weekly equipment report is available.,NORMAL,factory,factory-NORMAL-3
+Assembly hall: Weekly equipment report is available.,NORMAL,factory,factory-NORMAL-3
+Unit B: Weekly equipment report is available.,NORMAL,factory,factory-NORMAL-3
+Main site: Weekly equipment report is available.,NORMAL,factory,factory-NORMAL-3
+Block C: Spare motor delivery confirmed for tomorrow.,NORMAL,factory,factory-NORMAL-4
+Line 7: Spare motor delivery confirmed for tomorrow.,NORMAL,factory,factory-NORMAL-4
+West plant: Spare motor delivery confirmed for tomorrow.,NORMAL,factory,factory-NORMAL-4
+Assembly hall: Spare motor delivery confirmed for tomorrow.,NORMAL,factory,factory-NORMAL-4
+Unit B: Spare motor delivery confirmed for tomorrow.,NORMAL,factory,factory-NORMAL-4
+Main site: Spare motor delivery confirmed for tomorrow.,NORMAL,factory,factory-NORMAL-4
+Block C: Emergency stop drill is scheduled next week.,NORMAL,factory,factory-NORMAL-5
+Line 7: Emergency stop drill is scheduled next week.,NORMAL,factory,factory-NORMAL-5
+West plant: Emergency stop drill is scheduled next week.,NORMAL,factory,factory-NORMAL-5
+Assembly hall: Emergency stop drill is scheduled next week.,NORMAL,factory,factory-NORMAL-5
+Unit B: Emergency stop drill is scheduled next week.,NORMAL,factory,factory-NORMAL-5
+Main site: Emergency stop drill is scheduled next week.,NORMAL,factory,factory-NORMAL-5
+Block C: Please archive yesterday's production totals.,NORMAL,factory,factory-NORMAL-6
+Line 7: Please archive yesterday's production totals.,NORMAL,factory,factory-NORMAL-6
+West plant: Please archive yesterday's production totals.,NORMAL,factory,factory-NORMAL-6
+Assembly hall: Please archive yesterday's production totals.,NORMAL,factory,factory-NORMAL-6
+Unit B: Please archive yesterday's production totals.,NORMAL,factory,factory-NORMAL-6
+Main site: Please archive yesterday's production totals.,NORMAL,factory,factory-NORMAL-6
+Block C: Maintenance schedule has been updated.,NORMAL,factory,factory-NORMAL-7
+Line 7: Maintenance schedule has been updated.,NORMAL,factory,factory-NORMAL-7
+West plant: Maintenance schedule has been updated.,NORMAL,factory,factory-NORMAL-7
+Assembly hall: Maintenance schedule has been updated.,NORMAL,factory,factory-NORMAL-7
+Unit B: Maintenance schedule has been updated.,NORMAL,factory,factory-NORMAL-7
+Main site: Maintenance schedule has been updated.,NORMAL,factory,factory-NORMAL-7
+Block C: Shift handover notes are ready.,NORMAL,factory,factory-NORMAL-8
+Line 7: Shift handover notes are ready.,NORMAL,factory,factory-NORMAL-8
+West plant: Shift handover notes are ready.,NORMAL,factory,factory-NORMAL-8
+Assembly hall: Shift handover notes are ready.,NORMAL,factory,factory-NORMAL-8
+Unit B: Shift handover notes are ready.,NORMAL,factory,factory-NORMAL-8
+Main site: Shift handover notes are ready.,NORMAL,factory,factory-NORMAL-8
+Block C: Fire extinguisher inventory was updated.,NORMAL,factory,factory-NORMAL-9
+Line 7: Fire extinguisher inventory was updated.,NORMAL,factory,factory-NORMAL-9
+West plant: Fire extinguisher inventory was updated.,NORMAL,factory,factory-NORMAL-9
+Assembly hall: Fire extinguisher inventory was updated.,NORMAL,factory,factory-NORMAL-9
+Unit B: Fire extinguisher inventory was updated.,NORMAL,factory,factory-NORMAL-9
+Main site: Fire extinguisher inventory was updated.,NORMAL,factory,factory-NORMAL-9
+Sector C: Floodwater rising; evacuate residents immediately.,CRITICAL,disaster,disaster-CRITICAL-0
+East zone: Floodwater rising; evacuate residents immediately.,CRITICAL,disaster,disaster-CRITICAL-0
+River district: Floodwater rising; evacuate residents immediately.,CRITICAL,disaster,disaster-CRITICAL-0
+Field post: Floodwater rising; evacuate residents immediately.,CRITICAL,disaster,disaster-CRITICAL-0
+Zone 2: Floodwater rising; evacuate residents immediately.,CRITICAL,disaster,disaster-CRITICAL-0
+North camp: Floodwater rising; evacuate residents immediately.,CRITICAL,disaster,disaster-CRITICAL-0
+Sector C: People trapped after the bridge collapsed.,CRITICAL,disaster,disaster-CRITICAL-1
+East zone: People trapped after the bridge collapsed.,CRITICAL,disaster,disaster-CRITICAL-1
+River district: People trapped after the bridge collapsed.,CRITICAL,disaster,disaster-CRITICAL-1
+Field post: People trapped after the bridge collapsed.,CRITICAL,disaster,disaster-CRITICAL-1
+Zone 2: People trapped after the bridge collapsed.,CRITICAL,disaster,disaster-CRITICAL-1
+North camp: People trapped after the bridge collapsed.,CRITICAL,disaster,disaster-CRITICAL-1
+Sector C: Fire reported in the shelter; send help.,CRITICAL,disaster,disaster-CRITICAL-2
+East zone: Fire reported in the shelter; send help.,CRITICAL,disaster,disaster-CRITICAL-2
+River district: Fire reported in the shelter; send help.,CRITICAL,disaster,disaster-CRITICAL-2
+Field post: Fire reported in the shelter; send help.,CRITICAL,disaster,disaster-CRITICAL-2
+Zone 2: Fire reported in the shelter; send help.,CRITICAL,disaster,disaster-CRITICAL-2
+North camp: Fire reported in the shelter; send help.,CRITICAL,disaster,disaster-CRITICAL-2
+Sector C: Emergency rescue required near the river.,CRITICAL,disaster,disaster-CRITICAL-3
+East zone: Emergency rescue required near the river.,CRITICAL,disaster,disaster-CRITICAL-3
+River district: Emergency rescue required near the river.,CRITICAL,disaster,disaster-CRITICAL-3
+Field post: Emergency rescue required near the river.,CRITICAL,disaster,disaster-CRITICAL-3
+Zone 2: Emergency rescue required near the river.,CRITICAL,disaster,disaster-CRITICAL-3
+North camp: Emergency rescue required near the river.,CRITICAL,disaster,disaster-CRITICAL-3
+Sector C: Road submerged and the evacuation convoy is stranded.,CRITICAL,disaster,disaster-CRITICAL-4
+East zone: Road submerged and the evacuation convoy is stranded.,CRITICAL,disaster,disaster-CRITICAL-4
+River district: Road submerged and the evacuation convoy is stranded.,CRITICAL,disaster,disaster-CRITICAL-4
+Field post: Road submerged and the evacuation convoy is stranded.,CRITICAL,disaster,disaster-CRITICAL-4
+Zone 2: Road submerged and the evacuation convoy is stranded.,CRITICAL,disaster,disaster-CRITICAL-4
+North camp: Road submerged and the evacuation convoy is stranded.,CRITICAL,disaster,disaster-CRITICAL-4
+Sector C: Landslide has blocked the only escape route.,CRITICAL,disaster,disaster-CRITICAL-5
+East zone: Landslide has blocked the only escape route.,CRITICAL,disaster,disaster-CRITICAL-5
+River district: Landslide has blocked the only escape route.,CRITICAL,disaster,disaster-CRITICAL-5
+Field post: Landslide has blocked the only escape route.,CRITICAL,disaster,disaster-CRITICAL-5
+Zone 2: Landslide has blocked the only escape route.,CRITICAL,disaster,disaster-CRITICAL-5
+North camp: Landslide has blocked the only escape route.,CRITICAL,disaster,disaster-CRITICAL-5
+Sector C: Urgent assistance needed for injured volunteers.,CRITICAL,disaster,disaster-CRITICAL-6
+East zone: Urgent assistance needed for injured volunteers.,CRITICAL,disaster,disaster-CRITICAL-6
+River district: Urgent assistance needed for injured volunteers.,CRITICAL,disaster,disaster-CRITICAL-6
+Field post: Urgent assistance needed for injured volunteers.,CRITICAL,disaster,disaster-CRITICAL-6
+Zone 2: Urgent assistance needed for injured volunteers.,CRITICAL,disaster,disaster-CRITICAL-6
+North camp: Urgent assistance needed for injured volunteers.,CRITICAL,disaster,disaster-CRITICAL-6
+Sector C: Danger of collapse; clear the building immediately.,CRITICAL,disaster,disaster-CRITICAL-7
+East zone: Danger of collapse; clear the building immediately.,CRITICAL,disaster,disaster-CRITICAL-7
+River district: Danger of collapse; clear the building immediately.,CRITICAL,disaster,disaster-CRITICAL-7
+Field post: Danger of collapse; clear the building immediately.,CRITICAL,disaster,disaster-CRITICAL-7
+Zone 2: Danger of collapse; clear the building immediately.,CRITICAL,disaster,disaster-CRITICAL-7
+North camp: Danger of collapse; clear the building immediately.,CRITICAL,disaster,disaster-CRITICAL-7
+Sector C: Water supply contaminated; emergency distribution required.,CRITICAL,disaster,disaster-CRITICAL-8
+East zone: Water supply contaminated; emergency distribution required.,CRITICAL,disaster,disaster-CRITICAL-8
+River district: Water supply contaminated; emergency distribution required.,CRITICAL,disaster,disaster-CRITICAL-8
+Field post: Water supply contaminated; emergency distribution required.,CRITICAL,disaster,disaster-CRITICAL-8
+Zone 2: Water supply contaminated; emergency distribution required.,CRITICAL,disaster,disaster-CRITICAL-8
+North camp: Water supply contaminated; emergency distribution required.,CRITICAL,disaster,disaster-CRITICAL-8
+Sector C: Distress call received from an isolated village.,CRITICAL,disaster,disaster-CRITICAL-9
+East zone: Distress call received from an isolated village.,CRITICAL,disaster,disaster-CRITICAL-9
+River district: Distress call received from an isolated village.,CRITICAL,disaster,disaster-CRITICAL-9
+Field post: Distress call received from an isolated village.,CRITICAL,disaster,disaster-CRITICAL-9
+Zone 2: Distress call received from an isolated village.,CRITICAL,disaster,disaster-CRITICAL-9
+North camp: Distress call received from an isolated village.,CRITICAL,disaster,disaster-CRITICAL-9
+Sector C: Weekly relief supply report submitted.,NORMAL,disaster,disaster-NORMAL-0
+East zone: Weekly relief supply report submitted.,NORMAL,disaster,disaster-NORMAL-0
+River district: Weekly relief supply report submitted.,NORMAL,disaster,disaster-NORMAL-0
+Field post: Weekly relief supply report submitted.,NORMAL,disaster,disaster-NORMAL-0
+Zone 2: Weekly relief supply report submitted.,NORMAL,disaster,disaster-NORMAL-0
+North camp: Weekly relief supply report submitted.,NORMAL,disaster,disaster-NORMAL-0
+Sector C: Routine shelter occupancy count recorded.,NORMAL,disaster,disaster-NORMAL-1
+East zone: Routine shelter occupancy count recorded.,NORMAL,disaster,disaster-NORMAL-1
+River district: Routine shelter occupancy count recorded.,NORMAL,disaster,disaster-NORMAL-1
+Field post: Routine shelter occupancy count recorded.,NORMAL,disaster,disaster-NORMAL-1
+Zone 2: Routine shelter occupancy count recorded.,NORMAL,disaster,disaster-NORMAL-1
+North camp: Routine shelter occupancy count recorded.,NORMAL,disaster,disaster-NORMAL-1
+Sector C: Tomorrow's volunteer meeting starts at noon.,NORMAL,disaster,disaster-NORMAL-2
+East zone: Tomorrow's volunteer meeting starts at noon.,NORMAL,disaster,disaster-NORMAL-2
+River district: Tomorrow's volunteer meeting starts at noon.,NORMAL,disaster,disaster-NORMAL-2
+Field post: Tomorrow's volunteer meeting starts at noon.,NORMAL,disaster,disaster-NORMAL-2
+Zone 2: Tomorrow's volunteer meeting starts at noon.,NORMAL,disaster,disaster-NORMAL-2
+North camp: Tomorrow's volunteer meeting starts at noon.,NORMAL,disaster,disaster-NORMAL-2
+Sector C: Food parcel inventory is ready for review.,NORMAL,disaster,disaster-NORMAL-3
+East zone: Food parcel inventory is ready for review.,NORMAL,disaster,disaster-NORMAL-3
+River district: Food parcel inventory is ready for review.,NORMAL,disaster,disaster-NORMAL-3
+Field post: Food parcel inventory is ready for review.,NORMAL,disaster,disaster-NORMAL-3
+Zone 2: Food parcel inventory is ready for review.,NORMAL,disaster,disaster-NORMAL-3
+North camp: Food parcel inventory is ready for review.,NORMAL,disaster,disaster-NORMAL-3
+Sector C: Evacuation drill schedule has been circulated.,NORMAL,disaster,disaster-NORMAL-4
+East zone: Evacuation drill schedule has been circulated.,NORMAL,disaster,disaster-NORMAL-4
+River district: Evacuation drill schedule has been circulated.,NORMAL,disaster,disaster-NORMAL-4
+Field post: Evacuation drill schedule has been circulated.,NORMAL,disaster,disaster-NORMAL-4
+Zone 2: Evacuation drill schedule has been circulated.,NORMAL,disaster,disaster-NORMAL-4
+North camp: Evacuation drill schedule has been circulated.,NORMAL,disaster,disaster-NORMAL-4
+Sector C: Weather briefing notes are available.,NORMAL,disaster,disaster-NORMAL-5
+East zone: Weather briefing notes are available.,NORMAL,disaster,disaster-NORMAL-5
+River district: Weather briefing notes are available.,NORMAL,disaster,disaster-NORMAL-5
+Field post: Weather briefing notes are available.,NORMAL,disaster,disaster-NORMAL-5
+Zone 2: Weather briefing notes are available.,NORMAL,disaster,disaster-NORMAL-5
+North camp: Weather briefing notes are available.,NORMAL,disaster,disaster-NORMAL-5
+Sector C: Please confirm the next delivery window.,NORMAL,disaster,disaster-NORMAL-6
+East zone: Please confirm the next delivery window.,NORMAL,disaster,disaster-NORMAL-6
+River district: Please confirm the next delivery window.,NORMAL,disaster,disaster-NORMAL-6
+Field post: Please confirm the next delivery window.,NORMAL,disaster,disaster-NORMAL-6
+Zone 2: Please confirm the next delivery window.,NORMAL,disaster,disaster-NORMAL-6
+North camp: Please confirm the next delivery window.,NORMAL,disaster,disaster-NORMAL-6
+Sector C: Relief team shift handover completed.,NORMAL,disaster,disaster-NORMAL-7
+East zone: Relief team shift handover completed.,NORMAL,disaster,disaster-NORMAL-7
+River district: Relief team shift handover completed.,NORMAL,disaster,disaster-NORMAL-7
+Field post: Relief team shift handover completed.,NORMAL,disaster,disaster-NORMAL-7
+Zone 2: Relief team shift handover completed.,NORMAL,disaster,disaster-NORMAL-7
+North camp: Relief team shift handover completed.,NORMAL,disaster,disaster-NORMAL-7
+Sector C: Shelter registration desk opens tomorrow.,NORMAL,disaster,disaster-NORMAL-8
+East zone: Shelter registration desk opens tomorrow.,NORMAL,disaster,disaster-NORMAL-8
+River district: Shelter registration desk opens tomorrow.,NORMAL,disaster,disaster-NORMAL-8
+Field post: Shelter registration desk opens tomorrow.,NORMAL,disaster,disaster-NORMAL-8
+Zone 2: Shelter registration desk opens tomorrow.,NORMAL,disaster,disaster-NORMAL-8
+North camp: Shelter registration desk opens tomorrow.,NORMAL,disaster,disaster-NORMAL-8
+Sector C: Monthly rescue equipment inspection completed.,NORMAL,disaster,disaster-NORMAL-9
+East zone: Monthly rescue equipment inspection completed.,NORMAL,disaster,disaster-NORMAL-9
+River district: Monthly rescue equipment inspection completed.,NORMAL,disaster,disaster-NORMAL-9
+Field post: Monthly rescue equipment inspection completed.,NORMAL,disaster,disaster-NORMAL-9
+Zone 2: Monthly rescue equipment inspection completed.,NORMAL,disaster,disaster-NORMAL-9
+North camp: Monthly rescue equipment inspection completed.,NORMAL,disaster,disaster-NORMAL-9

@@ -1,0 +1,16 @@
+{
+  "node": "alandi-01",
+  "listen_host": "127.0.0.1",
+  "tcp_port": 7200,
+  "peer_host": "127.0.0.1",
+  "peer_port": 7200,
+  "web_host": "127.0.0.1",
+  "web_port": 5000,
+  "database": "runtime/node.sqlite",
+  "timeout": 2,
+  "retries": 2,
+  "max_frame": 32768,
+  "mode": "priority",
+  "demo_delay_ms": 0,
+  "clocks_synced": false
+}
