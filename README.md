@@ -1,117 +1,125 @@
+<div align="center">
+
 # NetSense
+
 **Intelligent Message Priority System for Critical Network Communication**
 
-Suraj Rathod · Vishu Attri · Prabal Singh Bais  
-Department of Information Technology, MIT Academy of Engineering, Alandi, Pune  
-Data Communication · 2026–2027 · Guide: Mr. Shivaji Patil
+A critical alarm just joined the queue. What gets sent next?
 
-NetSense runs a sender, receiver and monitoring dashboard on each computer. Submit an English text message through the dashboard, Python client or local REST API. A trained TF-IDF classifier assigns its priority. One worker serves waiting critical messages first, sends each message over TCP, and records delivery after the receiver commits it to SQLite and acknowledges its ID.
+![Python 3.12](https://img.shields.io/badge/Python-3.12-193B56)
+![Flask](https://img.shields.io/badge/Web-Flask-266C68)
+![TCP](https://img.shields.io/badge/Transport-TCP-193B56)
+![SQLite](https://img.shields.io/badge/Storage-SQLite-266C68)
 
-## Start on Windows
+[Quick start](#quick-start) · [Live demo](#live-demo) · [Measured results](#measured-results) · [Project layout](#project-layout)
 
-1. Install 64-bit CPython **3.12** using the Windows installer from python.org. Include the Python launcher. The supplied dependency versions were exercised with Python 3.12.
-2. Extract the archive and open the **NetSense** folder containing `run.py` in VS Code. Open a PowerShell terminal there.
-3. Run the following commands. Installation requires internet access. Training, sending and monitoring run locally.
+</div>
+
+## Two messages, one sender
+
+| Message | Predicted priority |
+| --- | --- |
+| “Good morning, shift handover at 9 AM.” | `NORMAL` |
+| “Emergency: patient in bed 4, heart rate critical.” | `CRITICAL` |
+
+If both messages are waiting, NetSense picks the emergency first. If the handover is already in flight, it finishes before the emergency starts. Messages keep their arrival order within each priority class.
+
+The scheduling decision happens in the sending application’s middleware before NetSense writes to the TCP connection. The receiver commits the message to SQLite and acknowledges its ID. One dashboard lets you follow that path from prediction to receipt.
+
+## How a message moves
+
+```mermaid
+flowchart TD
+    Input["Browser, Python client or REST API"] --> Model["Normalize text and score with TF-IDF + logistic regression"]
+    Model --> C["CRITICAL FIFO queue"]
+    Model --> N["NORMAL FIFO queue"]
+    C --> Worker["Non-preemptive sender"]
+    N --> Worker
+    Worker --> Link["Length-prefixed JSON over TCP"]
+    Link --> Receiver["Receiver validates and commits to SQLite"]
+    Receiver --> Monitor["Live monitoring and analytics"]
+    Receiver -. "Acknowledges message ID" .-> Worker
+```
+
+## Quick start
+
+Install **64-bit Python 3.12**. Run these commands from the folder containing `app.py` and `requirements.txt`.
+
+<details open>
+<summary><strong>Windows · PowerShell</strong></summary>
 
 ```powershell
 py -3.12 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-python app.py
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe app.py
 ```
 
-If script activation is restricted, run the commands with `.\.venv\Scripts\python.exe` in place of `python`. The archive includes the CSV and a trained model. Retraining from the supplied CSV recreates both the model and its evaluation metadata. To rebuild the synthetic CSV itself, run `python -m ml.build_data` first.
+</details>
 
-Open **http://127.0.0.1:5000**. Open **Send message**, select a sample and click **Send message**. Open **Live monitoring** to inspect its receipt. The same agent sends over a real loopback TCP connection and displays the committed receipt. Use Ctrl+C to drain queued work and stop. The database lives at `runtime/node.sqlite`.
+<details>
+<summary><strong>Linux or macOS</strong></summary>
 
-On Linux or macOS, create the environment using `python3.12 -m venv .venv`, activate with `source .venv/bin/activate`, then use the same install and startup commands.
-
-## Present from one laptop
-
-1. Open Network nodes and test the configured TCP peer. Local demo uses the same machine as sender and receiver.
-2. Open Send message, select the hospital alarm and send it. In Live monitoring, open the message ID to see its score, timestamps and delivery latency. Repeat with the handover sample.
-3. In Traffic simulator, start a 32-message mixed run with 15 ms arrivals and 120 ms pacing. Inspect the waiting queues and received order. Stop generation to let accepted work drain.
-4. Click Compare FCFS and priority. Both policies replay the same classified input under a fixed service time. Compare critical delay **and** maximum normal wait. These chart values are simulated. The two-process script below measures actual local TCP deliveries.
-5. Open Analytics for measured delivery and queue timing. ML model shows the separately evaluated synthetic test set. Changes to the threshold last until restart or retraining. Message corrections enter SQLite and can be included by an explicit retraining run. Administrative actions use the dashboard on localhost.
-
-The console shows up to 500 recent receipts in Live monitoring. CSV export covers the full receiver log. The classic single-page dashboard is preserved at `/classic`.
-
-## Run two agents on one computer
-
-Generate separate configurations, ports and databases. In two terminals with the virtual environment active, start B first and then A.
-
-```powershell
-python -m scripts.configure_pair
-# Terminal 1
-python run.py --config config/node-B.json
-# Terminal 2
-python run.py --config config/node-A.json
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python app.py
 ```
 
-A's dashboard is **http://127.0.0.1:5001**. B's is **http://127.0.0.1:5002**. Send from A and look for the message on B. The generated pair uses an 80 ms inter-message demonstration pause. Set `demo_delay_ms` to zero for ordinary operation.
+</details>
 
-## Run on two Windows computers
+Open [http://127.0.0.1:5000](http://127.0.0.1:5000). The default configuration sends messages through a real local TCP connection. NetSense initializes SQLite on startup and ships with a trained model.
 
-1. Connect A and B to the same trusted private LAN. Install the project and dependencies on each. Run `ipconfig` on each and note the IPv4 addresses of their active LAN adapters.
-2. Generate the configurations on each machine with the same A and B addresses. The addresses below are examples. For previously generated files, edit the corresponding fields directly. The generator preserves existing files.
+## Live demo
 
-```powershell
-python -m scripts.configure_pair --a 192.168.1.21 --b 192.168.1.22
-```
+1. **Send an alarm.** Open **Send message**, select the emergency example and submit it. The confirmation shows the classification, model score and message ID.
+2. **Follow the receipt.** Open **Live monitoring** and click the message ID to inspect its timestamps, classification time, queue wait and delivery latency.
+3. **Create a backlog.** Open **Traffic simulator** and start a mixed run with **32 messages**, **25% critical examples**, a **15 ms arrival interval**, and **120 ms service pacing**. Watch the waiting queues and compare arrival and delivery order.
+4. **Compare policies.** Click **Compare FCFS and priority** to replay the same classified workload under both policies in a simulation. Inspect the average critical delay and maximum normal wait.
+5. **Inspect the model.** Open **ML model** for the held-out confusion matrix and the threshold control. **Analytics** shows measured traffic separately from the simulated comparison.
 
-3. On B, allow incoming TCP **7202** from A on the private network profile. For return traffic from B to A, allow inbound TCP **7201** on A. An administrator can add these scoped rules locally on the indicated machine. Replace the example addresses.
+Use the [faculty demo guide](docs/DEMO_GUIDE.md) for the full walkthrough.
 
-```powershell
-# On B
-New-NetFirewallRule -DisplayName "NetSense from A" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 7202 -RemoteAddress 192.168.1.21 -Profile Private
-# On A
-New-NetFirewallRule -DisplayName "NetSense from B" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 7201 -RemoteAddress 192.168.1.22 -Profile Private
-```
+## Measured results
 
-4. For signed frames and acknowledgements, set the same private value for `NETSENSE_SECRET` in both launch terminals, for example `$env:NETSENSE_SECRET = Read-Host "Enter the shared demo secret"`. Message contents travel in plaintext. Use synthetic demonstration traffic.
-5. Start B with `python run.py --config config/node-B.json`. On A run `Test-NetConnection 192.168.1.22 -Port 7202`. Check that `TcpTestSucceeded` is true, then start A with `python run.py --config config/node-A.json`.
-6. Use the local dashboard on each computer. Send a message from A. On B, open its details and match the ID, content and sender. Repeat in reverse. Only the TCP receiver needs LAN exposure. The Flask dashboard and submission API stay on loopback. Binding a service to `0.0.0.0` exposes it through all available IPv4 interfaces.
-7. Remote one-way time is hidden initially. Check clock synchronization on **both** computers (on Windows, `w32tm /query /status`). Enable `clocks_synced` on the receiver and restart only when the clocks’ uncertainty is acceptable for the measurements. Queue waiting time is available independently. Both nodes may receive, so configure each as needed.
+The benchmark ran separate sender and receiver processes on one computer. Each policy delivered and acknowledged all 32 messages.
 
-## SDK and receiving interface
+| Mean queue wait | First-come, first-served | NetSense priority |
+| --- | ---: | ---: |
+| Critical messages | 421.4 ms | 92.5 ms |
+| Normal messages | 371.9 ms | 479.8 ms |
 
-From the project directory, using the default single-node configuration:
+In this run, critical messages waited **78% less** on average. Normal messages waited **107.9 ms longer** on average. Strict priority makes that trade-off visible under load.
 
-```python
-from netsense.client import Client
+The logistic regression model correctly classified **66 of 72** held-out synthetic examples at a threshold of **0.45**. It caught all **36 critical examples** and incorrectly flagged **6 normal examples**. The corpus covers hospital, disaster-response and factory scenarios. These results describe an academic prototype evaluated on synthetic English messages.
 
-client = Client("http://127.0.0.1:5000")
-receipt = client.send_message("Fire reported in block C. Evacuate immediately.", "disaster")
-print(receipt["id"], receipt["label"])
-# Run after delivery, against the receiving node's local API.
-print(client.received(id=receipt["id"]))
-```
+Ten automated tests passed. Physical two-computer LAN and full browser verification are pending. See the [test report](docs/TEST_REPORT.md) and [benchmark data](docs/benchmark.json).
 
-The HTTP equivalent in PowerShell is:
+## Verify or run two nodes
 
-```powershell
-$body = @{text="Please submit the weekly supply report."; domain="disaster"} | ConvertTo-Json
-Invoke-RestMethod 'http://127.0.0.1:5000/api/messages/send' -Method Post -ContentType application/json -Body $body
-Invoke-RestMethod 'http://127.0.0.1:5000/api/messages'
-```
+With the virtual environment active, run:
 
-## Verification and presentation
-
-```powershell
+```bash
 python -m unittest discover -v
-python -m scripts.compare --output my-comparison.json
+python -m scripts.compare --output local-benchmark.json
+python -m scripts.configure_pair
 ```
 
-The comparison starts fresh agents and databases for each policy, checks received IDs and contents, then restarts each receiver and checks persistence. For optional browser automation, install `playwright` in a development environment, run `python -m playwright install chromium`, then `python -m scripts.console_check`.
+In separate terminals, start Node B with `python app.py --config config/node-B.json`, then Node A with `python app.py --config config/node-A.json`. Send from [Node A](http://127.0.0.1:5001) and watch the receipt on [Node B](http://127.0.0.1:5002). The [LAN guide](docs/DEMO_GUIDE.md#5-physical-lan-verification) documents the acceptance procedure for two physical machines.
 
-| File | Use |
-|---|---|
-| docs/DEMO_GUIDE.md | Five faculty demonstrations and physical LAN acceptance record |
-| docs/ARCHITECTURE.md | Follow one message across the modules |
-| docs/TECHNICAL_DOCUMENTATION.md | Protocol, API, training, timing and configuration reference |
-| docs/TEST_REPORT.md | Observed model, scheduling, transport and browser results |
-| ml/model_metadata.json and docs/benchmark.json | Machine-readable measurements |
+## Project layout
 
-**Scope.** Applications integrate explicitly through an adapter, the SDK or REST. Strict priority controls a single sender's backlog. Each agent has one configured outbound peer and can accept messages from multiple permitted peers. The synthetic English classifier is an educational prototype. Real safety-critical deployment needs separate validation.
+| Path | What it contains |
+| --- | --- |
+| [`app.py`](app.py) | Application entry point |
+| [`netsense/`](netsense/) | TCP transport, classifier, scheduler, API and storage |
+| [`ml/`](ml/) | Dataset generation, model training and evaluation |
+| [`dashboard/`](dashboard/) | Flask templates, styles and browser scripts |
+| [`tests/`](tests/) | Automated transport, scheduling and console checks |
+| [`docs/`](docs/) | Architecture, technical reference and demo guide |
 
-**Troubleshooting.** A missing model or metadata file requires `python -m ml.train_model`. A bind error usually means that another node owns the configured port or the local address belongs to another machine. A queued ID followed by failed attempts points to peer address, firewall, listener or secret mismatch. Look at the sender activity and the receiver's dashboard separately. Use one database file per running agent.
+## Project team
+
+**Suraj Rathod · Vishu Attri · Prabal Singh Bais**  
+Guided by **Mr. Shivaji Patil**  
+Department of Information Technology, MIT Academy of Engineering, Alandi, Pune  
+Data Communication Minor Project · 2026–2027
