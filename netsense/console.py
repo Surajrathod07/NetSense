@@ -4,6 +4,7 @@ import ipaddress
 import json
 import socket
 import time
+import os
 from threading import Lock
 from urllib.parse import urlparse
 from flask import Response, abort, jsonify, render_template, request
@@ -30,13 +31,28 @@ def install(app, agent):
     app.add_url_rule("/", "overview", view)
     app.add_url_rule("/<page>", "pages", view)
 
-    @app.before_request
-    def local_controls():
-        if request.method=="POST":
-            if request.headers.get("Origin") and urlparse(request.headers["Origin"]).netloc != request.host:
-                abort(403)
-            if request.path.startswith("/api/control/") and (not ipaddress.ip_address(request.remote_addr).is_loopback or request.host.split(":")[0] not in ("localhost","127.0.0.1")):
-                abort(403)
+@app.before_request
+def local_controls():
+    if request.method != "POST":
+        return
+
+    origin = request.headers.get("Origin")
+
+    if origin and urlparse(origin).netloc != request.host:
+        abort(403)
+
+    # Localhost protection is used during local development.
+    # Vercel requests come through a proxy, so their remote address
+    # is not 127.0.0.1.
+    if (
+        request.path.startswith("/api/control/")
+        and os.getenv("VERCEL") != "1"
+        and (
+            not ipaddress.ip_address(request.remote_addr).is_loopback
+            or request.host.split(":")[0] not in ("localhost", "127.0.0.1")
+        )
+    ):
+        abort(403)
 
     @app.get("/api/console")
     def console():
